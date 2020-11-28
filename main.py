@@ -19,7 +19,7 @@ def main():
     # with open('key.txt', 'r') as f:
     #     key = f.read()
     
-    # Key will not be uploaded to git. In production usage of file is advised.
+    # Key will not be uploaded to git. In production usage of file key.txt is advised.
     key = input("Enter Goolge API key: ")
 
     pool = ThreadPool(8)
