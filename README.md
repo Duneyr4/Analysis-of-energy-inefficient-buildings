@@ -22,9 +22,13 @@ There are several classes that manage the database connection, the creation of t
 The semantic key to access a picture is given through its address. The zip-code, the street and the building number are used to access the data sets and check whether an entry exists or not. If a building does not exist yet in the database a uuid-key is generated and used as a primary key for the building. The picture is saved with the “uuid”.jpg as filename. 
 ## Classes
 •	DBConnection: Manages the DB connections and handles DB cursors
+
 •	DBCursor: little Proxy for Cursors
+
 •	Building: The Buillding class is meant to manage the access and the storing of pictures and meta data.
+
 •	ImageExtractor: Interface to Google Street View API
+
 ## Files
 •	addresses.txt: some sample addresses for testing and mockup
 •	Building_database.py: home of Class Building
