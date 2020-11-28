@@ -164,3 +164,15 @@
 2020-11-28 00:53:33.908 CET [35416] LOG:  listening on IPv4 address "127.0.0.1", port 5432
 2020-11-28 00:53:33.946 CET [33744] LOG:  database system was shut down at 2020-11-28 00:49:49 CET
 2020-11-28 00:53:33.990 CET [35416] LOG:  database system is ready to accept connections
+2020-11-28 01:12:40.785 CET [25348] ERROR:  canceling statement due to user request
+2020-11-28 01:12:40.786 CET [35416] LOG:  received fast shutdown request
+2020-11-28 01:12:40.805 CET [35416] LOG:  aborting any active transactions
+2020-11-28 01:12:40.805 CET [35416] LOG:  background worker "logical replication launcher" (PID 25348) exited with exit code 1
+2020-11-28 01:12:40.818 CET [13800] LOG:  shutting down
+2020-11-28 01:12:40.821 CET [13800] PANIC:  could not open file "pg_commit_ts": No such file or directory
+2020-11-28 01:12:41.142 CET [35416] LOG:  checkpointer process (PID 13800) was terminated by exception 0xC0000409
+2020-11-28 01:12:41.142 CET [35416] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2020-11-28 01:12:41.143 CET [35416] LOG:  terminating any other active server processes
+2020-11-28 01:12:41.143 CET [30244] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2020-11-28 01:12:41.146 CET [35416] LOG:  abnormal database system shutdown
+2020-11-28 01:12:41.147 CET [35416] LOG:  database system is shut down
