@@ -195,3 +195,5 @@
 2020-11-28 11:05:06.396 CET [16640] STATEMENT:  EXPLAIN delete from "buildings" LIMIT 1000;
 2020-11-28 11:05:58.745 CET [13316] ERROR:  syntax error at or near "d" at character 9
 2020-11-28 11:05:58.745 CET [13316] STATEMENT:  EXPLAIN d FROM "buildings";
+2020-11-28 11:05:59.384 CET [13316] ERROR:  syntax error at or near "delet" at character 9
+2020-11-28 11:05:59.384 CET [13316] STATEMENT:  EXPLAIN delet FROM "buildings";
