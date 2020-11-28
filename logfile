@@ -1,0 +1,178 @@
+2020-11-27 12:25:23.721 CET [28792] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1916, 64-bit
+2020-11-27 12:25:23.724 CET [28792] LOG:  listening on IPv6 address "::1", port 5432
+2020-11-27 12:25:23.724 CET [28792] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-11-27 12:25:23.760 CET [52928] LOG:  database system was shut down at 2020-11-27 12:24:30 CET
+2020-11-27 12:25:23.792 CET [28792] LOG:  database system is ready to accept connections
+2020-11-27 12:38:37.414 CET [56096] FATAL:  database "building_db" does not exist
+2020-11-27 15:48:27.754 CET [3640] ERROR:  syntax error at or near "a" at character 9
+2020-11-27 15:48:27.754 CET [3640] STATEMENT:  EXPLAIN a
+	;
+2020-11-27 15:48:28.193 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:28.193 CET [3640] STATEMENT:  EXPLAIN alter 
+	;
+2020-11-27 15:48:29.043 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:29.043 CET [3640] STATEMENT:  EXPLAIN alter t
+	;
+2020-11-27 15:48:29.699 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:29.699 CET [3640] STATEMENT:  EXPLAIN alter ta
+	;
+2020-11-27 15:48:30.044 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:30.044 CET [3640] STATEMENT:  EXPLAIN alter table 
+	;
+2020-11-27 15:48:31.802 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:31.802 CET [3640] STATEMENT:  EXPLAIN alter table bu
+	;
+2020-11-27 15:48:33.922 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:33.922 CET [3640] STATEMENT:  EXPLAIN alter table bui
+	;
+2020-11-27 15:48:34.904 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:34.904 CET [3640] STATEMENT:  EXPLAIN alter table buildings 
+	;
+2020-11-27 15:48:37.666 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:37.666 CET [3640] STATEMENT:  EXPLAIN alter table buildings add 
+	;
+2020-11-27 15:48:38.625 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:38.625 CET [3640] STATEMENT:  EXPLAIN alter table buildings add col
+	;
+2020-11-27 15:48:39.075 CET [3640] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:39.075 CET [3640] STATEMENT:  EXPLAIN alter table buildings add column 
+	;
+2020-11-27 15:48:45.846 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:45.846 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column 
+	;
+2020-11-27 15:48:50.710 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:50.710 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id       char(56)
+	;
+2020-11-27 15:48:53.115 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:53.115 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id   char(56)
+	;
+2020-11-27 15:48:53.555 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:53.555 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id char(56)
+	;
+2020-11-27 15:48:53.667 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:53.667 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id  char(56)
+	;
+2020-11-27 15:48:54.380 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:48:54.380 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id char(56)
+	;
+2020-11-27 15:49:00.290 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:49:00.290 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id char(56)
+	;
+2020-11-27 15:49:01.006 CET [13604] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:49:01.006 CET [13604] STATEMENT:  EXPLAIN alter table buildings add column google_id char(56)
+	;
+2020-11-27 15:50:11.324 CET [2044] ERROR:  syntax error at or near "alter" at character 9
+2020-11-27 15:50:11.324 CET [2044] STATEMENT:  EXPLAIN alter table buildings add column google_id char(56)
+	;
+2020-11-27 18:49:01.898 CET [16864] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 18:56:33.521 CET [56032] ERROR:  relation "building" does not exist at character 16
+2020-11-27 18:56:33.521 CET [56032] STATEMENT:     insert into building ( id, picture_path, zip, city, street, number, timestamp, google_id )
+	                                    values ('e2c0129e-30d9-11eb-bf27-24418cc4cdc1','/pictures/e2c0129e-30d9-11eb-bf27-24418cc4cdc1.jpg','8400','Winterthur','Teststrasse',1,1606499793.520707,'TEST1')
+2020-11-27 18:56:56.027 CET [47760] ERROR:  column "timestamp" is of type timestamp without time zone but expression is of type numeric at character 268
+2020-11-27 18:56:56.027 CET [47760] HINT:  You will need to rewrite or cast the expression.
+2020-11-27 18:56:56.027 CET [47760] STATEMENT:     insert into buildings ( id, picture_path, zip, city, street, number, timestamp, google_id )
+	                                    values ('f02a1ad9-30d9-11eb-be95-24418cc4cdc1','/pictures/f02a1ad9-30d9-11eb-be95-24418cc4cdc1.jpg','8400','Winterthur','Teststrasse',1,1606499816.026981,'TEST1')
+2020-11-27 19:02:29.769 CET [18308] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:03:58.632 CET [27084] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:04:56.622 CET [23688] ERROR:  syntax error at or near "s" at character 9
+2020-11-27 19:04:56.622 CET [23688] STATEMENT:  EXPLAIN s
+	;
+2020-11-27 19:04:57.337 CET [23688] ERROR:  syntax error at or near "seöe" at character 9
+2020-11-27 19:04:57.337 CET [23688] STATEMENT:  EXPLAIN seöe
+	;
+2020-11-27 19:04:57.539 CET [23688] ERROR:  syntax error at or near "seöec" at character 9
+2020-11-27 19:04:57.539 CET [23688] STATEMENT:  EXPLAIN seöec
+	;
+2020-11-27 19:04:57.684 CET [23688] ERROR:  syntax error at or near "seöect" at character 9
+2020-11-27 19:04:57.684 CET [23688] STATEMENT:  EXPLAIN seöect
+	;
+2020-11-27 19:04:57.785 CET [23688] ERROR:  syntax error at or near "seöect" at character 9
+2020-11-27 19:04:57.785 CET [23688] STATEMENT:  EXPLAIN seöect 
+	;
+2020-11-27 19:04:58.598 CET [23688] ERROR:  syntax error at or near "se" at character 9
+2020-11-27 19:04:58.598 CET [23688] STATEMENT:  EXPLAIN se
+	;
+2020-11-27 19:04:58.836 CET [23688] ERROR:  syntax error at or near "sel" at character 9
+2020-11-27 19:04:58.836 CET [23688] STATEMENT:  EXPLAIN sel
+	;
+2020-11-27 19:04:59.315 CET [23688] ERROR:  syntax error at or near "sele" at character 9
+2020-11-27 19:04:59.315 CET [23688] STATEMENT:  EXPLAIN sele
+	;
+2020-11-27 19:04:59.563 CET [23688] ERROR:  syntax error at or near "selec" at character 9
+2020-11-27 19:04:59.563 CET [23688] STATEMENT:  EXPLAIN selec
+	;
+2020-11-27 19:05:00.217 CET [23688] ERROR:  SELECT * with no tables specified is not valid at character 16
+2020-11-27 19:05:00.217 CET [23688] STATEMENT:  EXPLAIN select * 
+	;
+2020-11-27 19:05:00.836 CET [23688] ERROR:  syntax error at or near ";" at character 24
+2020-11-27 19:05:00.836 CET [23688] STATEMENT:  EXPLAIN select * from 
+	;
+2020-11-27 19:05:01.456 CET [23688] ERROR:  relation "bu" does not exist at character 23
+2020-11-27 19:05:01.456 CET [23688] STATEMENT:  EXPLAIN select * from bu
+	;
+2020-11-27 19:05:25.372 CET [23688] ERROR:  syntax error at or near "delefrom" at character 9
+2020-11-27 19:05:25.372 CET [23688] STATEMENT:  EXPLAIN delefrom buildings
+	;
+2020-11-27 19:07:45.680 CET [33152] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:08:49.345 CET [49160] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:10:09.929 CET [30396] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:11:16.560 CET [33904] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:12:13.891 CET [56840] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:15:17.416 CET [47704] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:16:15.275 CET [58412] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:18:01.800 CET [42356] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:25:05.156 CET [55932] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:25:19.105 CET [52748] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:25:54.618 CET [52628] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:27:06.981 CET [56384] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:27:33.254 CET [35744] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:28:45.366 CET [43296] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 19:29:47.878 CET [33196] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-27 20:00:19.887 CET [38888] ERROR:  syntax error at or near "google_id" at character 332
+2020-11-27 20:00:19.887 CET [38888] STATEMENT:     Update buildings set 
+	                                        picture_path = 'C:/Users/domin/OneDrive/Studium/Projekte/Luzern Hackathon Projekt/pictures/8d470e03-30de-11eb-bf3e-24418cc4cdc1.jpg',
+	                                        timestamp = '2020-11-27T20:00:19.886660'::timestamp
+	                                        google_id = 'TEST1' 
+	                                    where id = '8d470e03-30de-11eb-bf3e-24418cc4cdc1' 
+2020-11-27 23:46:22.460 CET [38888] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-28 00:08:39.334 CET [32420] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-28 00:10:26.317 CET [21752] LOG:  could not receive data from client: unrecognized winsock error 10054
+2020-11-28 00:49:21.915 CET [28792] LOG:  background worker "logical replication launcher" (PID 19676) was terminated by exception 0xC000013A
+2020-11-28 00:49:21.915 CET [28792] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2020-11-28 00:49:21.916 CET [28792] LOG:  terminating any other active server processes
+2020-11-28 00:49:21.916 CET [26928] WARNING:  terminating connection because of crash of another server process
+2020-11-28 00:49:21.916 CET [26928] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2020-11-28 00:49:21.916 CET [26928] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2020-11-28 00:49:21.929 CET [28792] LOG:  statistics collector process (PID 19060) was terminated by exception 0xC000013A
+2020-11-28 00:49:21.929 CET [28792] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2020-11-28 00:49:21.929 CET [28792] LOG:  all server processes terminated; reinitializing
+2020-11-28 00:49:21.955 CET [18172] LOG:  database system was interrupted; last known up at 2020-11-28 00:19:35 CET
+2020-11-28 00:49:22.239 CET [18172] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-11-28 00:49:22.244 CET [18172] LOG:  redo starts at 0/15F67B8
+2020-11-28 00:49:22.244 CET [18172] LOG:  invalid record length at 0/15F68A0: wanted 24, got 0
+2020-11-28 00:49:22.244 CET [18172] LOG:  redo done at 0/15F6868
+2020-11-28 00:49:22.301 CET [28792] LOG:  database system is ready to accept connections
+2020-11-28 00:49:49.749 CET [27864] ERROR:  canceling statement due to user request
+2020-11-28 00:49:49.749 CET [35560] ERROR:  canceling statement due to user request
+2020-11-28 00:49:49.749 CET [28792] LOG:  received fast shutdown request
+2020-11-28 00:49:49.754 CET [28792] LOG:  aborting any active transactions
+2020-11-28 00:49:49.760 CET [28792] LOG:  background worker "logical replication launcher" (PID 27864) exited with exit code 1
+2020-11-28 00:49:49.767 CET [12208] LOG:  shutting down
+2020-11-28 00:49:49.795 CET [28792] LOG:  database system is shut down
+2020-11-28 00:53:33.905 CET [35416] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1916, 64-bit
+2020-11-28 00:53:33.908 CET [35416] LOG:  listening on IPv6 address "::1", port 5432
+2020-11-28 00:53:33.908 CET [35416] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-11-28 00:53:33.946 CET [33744] LOG:  database system was shut down at 2020-11-28 00:49:49 CET
+2020-11-28 00:53:33.990 CET [35416] LOG:  database system is ready to accept connections
+2020-11-28 01:12:40.785 CET [25348] ERROR:  canceling statement due to user request
+2020-11-28 01:12:40.786 CET [35416] LOG:  received fast shutdown request
+2020-11-28 01:12:40.805 CET [35416] LOG:  aborting any active transactions
+2020-11-28 01:12:40.805 CET [35416] LOG:  background worker "logical replication launcher" (PID 25348) exited with exit code 1
+2020-11-28 01:12:40.818 CET [13800] LOG:  shutting down
+2020-11-28 01:12:40.821 CET [13800] PANIC:  could not open file "pg_commit_ts": No such file or directory
+2020-11-28 01:12:41.142 CET [35416] LOG:  checkpointer process (PID 13800) was terminated by exception 0xC0000409
+2020-11-28 01:12:41.142 CET [35416] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2020-11-28 01:12:41.143 CET [35416] LOG:  terminating any other active server processes
+2020-11-28 01:12:41.143 CET [30244] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2020-11-28 01:12:41.146 CET [35416] LOG:  abnormal database system shutdown
+2020-11-28 01:12:41.147 CET [35416] LOG:  database system is shut down
