@@ -31,16 +31,27 @@ The semantic key to access a picture is given through its address. The zip-code,
 
 ## Files
 •	addresses.txt: some sample addresses for testing and mockup
+
 •	Building_database.py: home of Class Building
+
 •	create_tables.py: Creates the needed DB tables
+
 •	db_connection.py: home of Classes DBConnection and DBCursor
+
 •	google_street_extractor.py: home of Class ImageExtractor
+
 •	key.txt: not used in prototype. Is supposed to contain the Google Street View API key
+
 •	main.py: Mockup of functionality. Reads addresses from addresses.txt and extracts data and images from google street view and saves them in the database using Classes ImageExtractor and Building
+
 •	Readme.md…
+
 •	requirements.txt: contains all necessary requirements (Anaconda style)
+
 •	server.ini: contains all configuration data (to be adjusted by customer by write_db_config.py)
+
 •	test_retrieve.py: Test of extraction of data and images that were written with main.py
+
 •	write_db_config.py: writes parameters to server.ini
 
 ## Authors 
