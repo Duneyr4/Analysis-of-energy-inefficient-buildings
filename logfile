@@ -185,3 +185,13 @@
 2020-11-28 01:54:19.073 CET [4540] LOG:  invalid record length at 0/15F68A0: wanted 24, got 0
 2020-11-28 01:54:19.073 CET [4540] LOG:  redo done at 0/15F6868
 2020-11-28 01:54:19.129 CET [12636] LOG:  database system is ready to accept connections
+2020-11-28 11:05:04.683 CET [16640] ERROR:  syntax error at or near "d" at character 9
+2020-11-28 11:05:04.683 CET [16640] STATEMENT:  EXPLAIN d "buildings" LIMIT 1000;
+2020-11-28 11:05:05.401 CET [16640] ERROR:  syntax error at or near "delet" at character 9
+2020-11-28 11:05:05.401 CET [16640] STATEMENT:  EXPLAIN delet "buildings" LIMIT 1000;
+2020-11-28 11:05:05.519 CET [16640] ERROR:  syntax error at or near ""buildings"" at character 17
+2020-11-28 11:05:05.519 CET [16640] STATEMENT:  EXPLAIN delete  "buildings" LIMIT 1000;
+2020-11-28 11:05:06.396 CET [16640] ERROR:  syntax error at or near "LIMIT" at character 33
+2020-11-28 11:05:06.396 CET [16640] STATEMENT:  EXPLAIN delete from "buildings" LIMIT 1000;
+2020-11-28 11:05:58.745 CET [13316] ERROR:  syntax error at or near "d" at character 9
+2020-11-28 11:05:58.745 CET [13316] STATEMENT:  EXPLAIN d FROM "buildings";

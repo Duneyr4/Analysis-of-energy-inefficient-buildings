@@ -1,11 +1,12 @@
 from google_street_extractor import ImageExtractor
+from multiprocessing.dummy import Pool as ThreadPool
+import building_database as bdb
 
 def addressResolver(address):
     address = address.replace(","," ")
     address = address.split(" ")
     address = {"zip":address[2],"city":address[3],"street":address[0],"number":address[1]}
     return address
-
 
 def main():
 
@@ -21,8 +22,10 @@ def main():
     # Key will not be uploaded to git. In production usage of file is advised.
     key = input("Enter Goolge API key: ")
 
+    pool = ThreadPool(8)
+
     #Loop over addresses and generate ImageExtractor objects to ingest data in pg-database
-    for address in addresslist:
+    def thread_line(address):
         addres_dict = addressResolver(address)
         
         image_object = ImageExtractor(zip=addres_dict["zip"],
@@ -37,11 +40,14 @@ def main():
         #Downloade image data as Pillow and NumpyObject
         image_object.get_image()
 
-        #save_building(zip, city, street, number, picture, google_id = None):
-        print(image_object.zip, image_object.city, image_object.street, image_object.number, image_object.image,image_object.location[0]["pano_id"])
+        # Save to database (see building_database.py)
+        bdb.save_building(image_object.zip, image_object.city, image_object.street, image_object.number, image_object.image,image_object.location[0]["pano_id"])
 
 
+    results  = pool.map(thread_line, addresslist)
 
+    for element in results:
+        print(element)
 
 if __name__ == "__main__":
     main()

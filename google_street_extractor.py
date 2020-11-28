@@ -5,8 +5,7 @@ from PIL import Image
 from io import BytesIO
 import numpy as np
 
-   
-    
+       
 class ImageExtractor():
     
     def __init__(self,zip,city,street,number,key):

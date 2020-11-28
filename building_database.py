@@ -38,7 +38,7 @@ class Building:
     def __get_uuid(self):
         return self.__uuid
 
-    uuid = property(__get_uuid())
+    uuid = property(__get_uuid)
 
 
     def __read_config(self):
@@ -48,10 +48,11 @@ class Building:
 
     def __read_db(self):
         
-        # Cursor erzeugen
+        # create Cursor
         cursor_uuid = uuid.uuid1()
         cursor = self.__building_db.create_cursor(cursor_uuid)
 
+        # define select
         select_building = '''   select
                                     id,
                                     picture_path,
@@ -66,11 +67,13 @@ class Building:
                                 and   street = %s
                                 and   number = %s; '''
         
+        # retrieve data
         cursor.execute(select_building, (self.__zip, self.__street, self.__number))
         building = cursor.fetchall()
         self.__building_db.connection.commit()
         self.__building_db.close_cursor(cursor_uuid)
 
+        # handle result
         if len(building) > 1:
             raise Exception("Multiple Buildings found! ZIP: " + str(self.__zip) + "; Street: " + self.__street + "; Number: " + str(self.__number) )
         elif len(building) == 0:
@@ -83,17 +86,22 @@ class Building:
             return True
 
     def save_picture(self, picture, google_id = None):
+
+        # define picture path
         picture_name = str(self.__uuid) + ".jpg"
         self.__picture_path = os.path.join(self.__path, picture_name)
         self.__google_id = google_id
 
+        # save picture to directory
         self.__write_picture(picture, self.__picture_path)
 
         timestamp = datetime.datetime.now()
 
+        # create cursor
         cursor_uuid = uuid.uuid1()
         cursor = self.__building_db.create_cursor(cursor_uuid)
 
+        # save data
         if self.__exists_db:
             update_building = '''   Update buildings set 
                                         picture_path = %s,
@@ -139,6 +147,7 @@ def open_building(zip,city,street,number):
 
 def main():
     
+    # Some tests...
     # Test save 1...
     picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/Dominik_Kubismus_final.png")
     save_building('8400', 'Winterthur', 'Teststrasse', 1, picture, "TEST1")
