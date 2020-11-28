@@ -13,8 +13,12 @@ def write_db_config():
         "port": "5432"
     }
 
+    db_config["DATABASE"] = {
+        "database": "building_label_db"
+    }
+
     db_config["PICTURES"] = {
-        "path": "C:/Users/domin/OneDrive/Studium/Projekte/Luzern Hackathon Projekt/pictures/"
+        "path": "C:/Users/domin/OneDrive/Studium/Projekte/Analysis-of-energy-inefficient-buildings/pictures/"
     }
 
     with open('server.ini', 'w') as config:

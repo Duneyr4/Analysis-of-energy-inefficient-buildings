@@ -176,3 +176,12 @@
 2020-11-28 01:12:41.143 CET [30244] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
 2020-11-28 01:12:41.146 CET [35416] LOG:  abnormal database system shutdown
 2020-11-28 01:12:41.147 CET [35416] LOG:  database system is shut down
+2020-11-28 01:54:18.757 CET [12636] LOG:  starting PostgreSQL 12.2, compiled by Visual C++ build 1916, 64-bit
+2020-11-28 01:54:18.760 CET [12636] LOG:  listening on IPv6 address "::1", port 5432
+2020-11-28 01:54:18.760 CET [12636] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-11-28 01:54:18.797 CET [4540] LOG:  database system was interrupted; last known up at 2020-11-28 00:19:35 CET
+2020-11-28 01:54:19.068 CET [4540] LOG:  database system was not properly shut down; automatic recovery in progress
+2020-11-28 01:54:19.073 CET [4540] LOG:  redo starts at 0/15F67B8
+2020-11-28 01:54:19.073 CET [4540] LOG:  invalid record length at 0/15F68A0: wanted 24, got 0
+2020-11-28 01:54:19.073 CET [4540] LOG:  redo done at 0/15F6868
+2020-11-28 01:54:19.129 CET [12636] LOG:  database system is ready to accept connections

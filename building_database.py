@@ -18,8 +18,13 @@ class Building:
         self.__timestamp = None
         self.__google_id = None
 
+        # Get configuration from server.ini
+        self.__read_config()
+        self.__path = self.__config["PICTURES"]["path"]
+        self.__db = self.__config["DATABASE"]["database"]
+
         # Establish database connection
-        self.__building_db = DBConnection("building_label_db")
+        self.__building_db = DBConnection(self.__db)
         self.__building_db.establish_connection()
 
         # Get Data from DB
@@ -29,14 +34,17 @@ class Building:
             self.__exists_db = False
             self.__uuid = uuid.uuid1()
 
-        # Get path from .ini
-        self.__read_config()
-        self.__path = self.__config["PICTURES"]["path"]
+
+    def __get_uuid(self):
+        return self.__uuid
+
+    uuid = property(__get_uuid())
 
 
     def __read_config(self):
         self.__config = ConfigParser()
         self.__config.read('server.ini')
+
 
     def __read_db(self):
         
@@ -73,7 +81,6 @@ class Building:
             self.__timestamp = building[0][6]
             self.__google_id = building[0][7]
             return True
-
 
     def save_picture(self, picture, google_id = None):
         picture_name = str(self.__uuid) + ".jpg"
@@ -119,15 +126,17 @@ class Building:
         return  self.__uuid, self.__picture_path, self.__zip, self.__city, self.__street, self.__number, self.__timestamp, self.__google_id, self.get_picture()
 
 
-def save_picture(zip, city, street, number, picture, google_id = None):
+def save_building(zip, city, street, number, picture, google_id = None):
     building_save = Building(zip, city, street, number)
     building_save.save_picture(picture, google_id)
+    return building_save.uuid
 
 
-def open_picture(zip,city,street,number):
+def open_building(zip,city,street,number):
     building_open = Building(zip, city, street, number)
     return building_open.get_building()
-            
+
+
 def main():
     
     # Test save 1...
@@ -139,10 +148,15 @@ def main():
     save_picture('8000', 'Zürich', 'Teststrasse', 1, picture, "TEST2")
 
     # Test save 3...
-    picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/landschaft_rembrandt_final.png")
+    picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/serowfinal.png")
     save_picture('8001', 'Zürich', 'Teststrasse', 1, picture, "TEST3")
 
-    # # Test read 1
+    # Test save 4...
+    picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/landschaft1_haring_final.png")
+    save_picture('8004', 'Zürich', 'Feststrasse', 1, picture, "TEST4")
+
+
+    # # Test read 3
     id3, pp3, zip3, city3, street3, num3, ts3, gid3, pic3 = open_picture('8000', 'Zürich', 'Teststrasse', 1)
 
 if __name__ == '__main__':
