@@ -141,23 +141,23 @@ def main():
     
     # Test save 1...
     picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/Dominik_Kubismus_final.png")
-    save_picture('8400', 'Winterthur', 'Teststrasse', 1, picture, "TEST1")
+    save_building('8400', 'Winterthur', 'Teststrasse', 1, picture, "TEST1")
 
     # Test save 2...
     picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/Luca_Haringfinal.png")
-    save_picture('8000', 'Zürich', 'Teststrasse', 1, picture, "TEST2")
+    save_building('8000', 'Zürich', 'Teststrasse', 1, picture, "TEST2")
 
     # Test save 3...
     picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/serowfinal.png")
-    save_picture('8001', 'Zürich', 'Teststrasse', 1, picture, "TEST3")
+    save_building('8001', 'Zürich', 'Teststrasse', 1, picture, "TEST3")
 
     # Test save 4...
     picture = cv2.imread("C:/Users/domin/OneDrive/Projekte/Python Projekte/Style Transfer/generated_images/landschaft1_haring_final.png")
-    save_picture('8004', 'Zürich', 'Feststrasse', 1, picture, "TEST4")
+    save_building('8004', 'Zürich', 'Feststrasse', 1, picture, "TEST4")
 
 
     # # Test read 3
-    id3, pp3, zip3, city3, street3, num3, ts3, gid3, pic3 = open_picture('8000', 'Zürich', 'Teststrasse', 1)
+    id3, pp3, zip3, city3, street3, num3, ts3, gid3, pic3 = open_building('8000', 'Zürich', 'Teststrasse', 1)
 
 if __name__ == '__main__':
     main()
