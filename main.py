@@ -7,8 +7,6 @@ def addressResolver(address):
     return address
 
 
-
-
 def main():
 
     #Read addresses
@@ -16,10 +14,12 @@ def main():
     with open('addresses.txt', 'rb') as adr:
         addresslist = adr.read().decode("UTF-8").replace("\n","").replace("\r","").split(";")
     
-
     #Reed GoogleStretViewAPI key information
-    with open('key.txt', 'r') as f:
-        key = f.read()
+    # with open('key.txt', 'r') as f:
+    #     key = f.read()
+    
+    # Key will not be uploaded to git. In production usage of file is advised.
+    key = input("Enter Goolge API key: ")
 
     #Loop over addresses and generate ImageExtractor objects to ingest data in pg-database
     for address in addresslist:

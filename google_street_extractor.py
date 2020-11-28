@@ -17,8 +17,6 @@ class ImageExtractor():
         self.address = f"{street} {number} ,{zip} {city}"
         self.key = key
 
-
-
     # Download meta data information from Google Street API
     def get_metadata(self):
         '''
