@@ -1,6 +1,6 @@
 # Analysis-of-energy-inefficient-buildings
 ## Project description 
-Rising Prices, shrinking resources, liability for climate and environment are just a few reasons to challenge our energy consumption and approach a more thoughtful and economical way. Buildings in Switzerland are responsible for about 45 % of energy usage. EMPA would like to change this by combining open data and modern technologies like neural network classification to evaluate buildings worth a structural energy efficiency upgrade and reduce energy loss in the city Lucerne. For the performance of image analysis and model training we first need a solid infrastructure to retrieve and store data. With our project we would like to tackle this challende. 
+Rising Prices, shrinking resources, liability for climate and environment are just a few reasons to challenge our energy consumption and approach a more thoughtful and economical way. Buildings in Switzerland are responsible for about 45 % of energy usage. EMPA would like to change this by combining open data and modern technologies like neural network classification to evaluate buildings worth a structural energy efficiency upgrade and reduce energy loss in the city Lucerne. For the performance of image analysis and model training we first need a solid infrastructure to retrieve and store data. With our project we would like to tackle this challenge. 
 
 ## Technical Base
 The application is using Python and PostgreSQL to save the data provided by the google API. The connection data like username, password, database name, etc. are stored in server.ini. 
@@ -40,6 +40,9 @@ The semantic key to access a picture is given through its address. The zip-code,
 •	test_retrieve.py: Test of extraction of data and images that were written with main.py
 
 •	write_db_config.py: writes parameters to server.ini
+
+## Data
+The data was retrieved with a Google API Key 
 
 ## Authors 
 Dominik Vasquez, Stephan Wernli, Luca Casuscelli, Jonas Zürcher 
